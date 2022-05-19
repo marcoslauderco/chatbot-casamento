@@ -1,4 +1,4 @@
 Flask
-chatterbot==latest
+chatterbot
 chatterbot-corpus
 SQLAlchemy
