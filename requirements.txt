@@ -1,4 +1,4 @@
 Flask
-ChatterBot
+# ChatterBot
 chatterbot-corpus
 SQLAlchemy
