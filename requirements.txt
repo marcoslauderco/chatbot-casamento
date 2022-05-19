@@ -1,4 +1,4 @@
 Flask
-chatterbot
-chatterbot-corpus
+ChatterBot==1.0.8
+chatterbot-corpus==1.2.0
 SQLAlchemy
