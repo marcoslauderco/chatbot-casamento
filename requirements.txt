@@ -1,6 +1,4 @@
-gunicorn
 Flask
-spacy
 chatterbot
 chatterbot-corpus
 SQLAlchemy
