@@ -13,7 +13,6 @@ trainer.train("./corpus/compliment.yml")
 trainer.train("./corpus/conversations.yml")
 trainer.train("./corpus/games.yml")
 trainer.train("./corpus/greetings.yml")
-trainer.train("./corpus/money.yml")
 
 @app.route("/")
 def home():
