@@ -4,7 +4,7 @@ from chatterbot.trainers import ChatterBotCorpusTrainer
 
 app = Flask(__name__)
 
-chatbot = ChatBot("amazing bot")
+chatbot = ChatBot("Chatterbot")
 trainer = ChatterBotCorpusTrainer(chatbot)
 # trainer.train("./corpus/casamento.yml")
 
