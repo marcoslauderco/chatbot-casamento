@@ -8,7 +8,7 @@ chatbot = ChatBot("Amazing Bot",
     storage_adapter='chatterbot.storage.SQLStorageAdapter',
     database="mydb")
 trainer = ChatterBotCorpusTrainer(chatbot)
-# trainer.train("./corpus/casamento.yml")
+trainer.train("./corpus/casamento.yml")
 
 @app.route("/")
 def home():
