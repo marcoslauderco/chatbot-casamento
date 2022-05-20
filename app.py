@@ -4,8 +4,8 @@ from chatterbot.trainers import ChatterBotCorpusTrainer
 
 app = Flask(__name__)
 
-# chatbot = ChatBot("Chatterbot")
-# trainer = ChatterBotCorpusTrainer(chatbot)
+chatbot = ChatBot("amazing bot")
+trainer = ChatterBotCorpusTrainer(chatbot)
 # trainer.train("./corpus/casamento.yml")
 
 @app.route("/")
