@@ -1,8 +1,10 @@
 from flask import Flask, render_template, request
 from chatterbot import ChatBot
 from chatterbot.trainers import ChatterBotCorpusTrainer
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 chatbot = ChatBot("Amazing Bot",
     storage_adapter='chatterbot.storage.SQLStorageAdapter',
