@@ -4,3 +4,4 @@ chatterbot
 flask
 pytz
 psycopg2
+flask-cors
