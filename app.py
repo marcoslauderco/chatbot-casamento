@@ -4,7 +4,9 @@ from chatterbot.trainers import ChatterBotCorpusTrainer
 
 app = Flask(__name__)
 
-chatbot = ChatBot("Chatterbot")
+chatbot = ChatBot("Amazing Bot",
+    storage_adapter='chatterbot.storage.SQLStorageAdapter',
+    databse="mydb")
 trainer = ChatterBotCorpusTrainer(chatbot)
 # trainer.train("./corpus/casamento.yml")
 
