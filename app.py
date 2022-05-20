@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 chatbot = ChatBot("Amazing Bot",
     storage_adapter='chatterbot.storage.SQLStorageAdapter',
-    databse="mydb")
+    database="mydb")
 trainer = ChatterBotCorpusTrainer(chatbot)
 # trainer.train("./corpus/casamento.yml")
 
