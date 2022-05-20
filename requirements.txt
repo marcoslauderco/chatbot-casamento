@@ -3,3 +3,4 @@ chatterbot-corpus
 chatterbot
 flask
 pytz
+psycopg2
