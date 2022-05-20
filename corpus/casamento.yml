@@ -35,7 +35,7 @@ conversations:
   - Dia 17 de Setembor de 2022 às 19:00. por favor chegue com antecedência
 - - Quando será
   - Dia 17 de Setembor de 2022 às 19:00. por favor chegue com antecedência
-- - Quando será o casamendo
+- - Quando será o casamento
   - Dia 17 de Setembor de 2022 às 19:00. por favor chegue com antecedência
 - - Quando vai ser
   - Dia 17 de Setembor de 2022 às 19:00. por favor chegue com antecedência
@@ -61,7 +61,9 @@ conversations:
   - No Buffet Ilha d'Capri. A cerimônia e a festa serão realizadas no mesmo local.
 - - Onde será
   - No Buffet Ilha d'Capri. A cerimônia e a festa serão realizadas no mesmo local.
-- - Onde será o casamento
+- - Onde será o casamento?
+  - No Buffet Ilha d'Capri. A cerimônia e a festa serão realizadas no mesmo local.
+- - Onde vai ser o casamento?
   - No Buffet Ilha d'Capri. A cerimônia e a festa serão realizadas no mesmo local.
 - - Qual local
   - No Buffet Ilha d'Capri. A cerimônia e a festa serão realizadas no mesmo local.
@@ -73,6 +75,8 @@ conversations:
   - No Buffet Ilha d'Capri. A cerimônia e a festa serão realizadas no mesmo local.
 - - Onde será cerimônia
   - No Buffet Ilha d'Capri. A cerimônia e a festa serão realizadas no mesmo local.
+- - Onde será a cerimônia
+  - No Buffet Ilha d'Capri. A cerimônia e a festa serão realizadas no mesmo local.
 - - Onde vai ser a cerimônia
   - No Buffet Ilha d'Capri. A cerimônia e a festa serão realizadas no mesmo local.
 - - Onde será a festa
@@ -80,10 +84,6 @@ conversations:
 - - Onde vai ser a festa
   - No Buffet Ilha d'Capri. A cerimônia e a festa serão realizadas no mesmo local.
 - - Quem é você?
-  - Sou a Amazing Bot, um programa feito para tirar todas suas dúvidas sobre o casamento.
-- - Quem é você?
-  - Sou a Amazing Bot, um programa feito para tirar todas suas dúvidas sobre o casamento.
-- - Quem é voce?
   - Sou a Amazing Bot, um programa feito para tirar todas suas dúvidas sobre o casamento.
 - - Quem é voce?
   - Sou a Amazing Bot, um programa feito para tirar todas suas dúvidas sobre o casamento.
@@ -109,6 +109,16 @@ conversations:
   - O Buffet Ilha d'Capri fica na Av. Paranavaí, 1733 - Pq. Ind. Bandeirantes. Maringá - PR
 - - Como faço para ir?
   - O Buffet Ilha d'Capri fica na Av. Paranavaí, 1733 - Pq. Ind. Bandeirantes. Maringá - PR
+- - Como eu chego la?
+  - O Buffet Ilha d'Capri fica na Av. Paranavaí, 1733 - Pq. Ind. Bandeirantes. Maringá - PR
+- - Como eu chego lá?
+  - O Buffet Ilha d'Capri fica na Av. Paranavaí, 1733 - Pq. Ind. Bandeirantes. Maringá - PR
+- - Qual o endereço?
+  - O Buffet Ilha d'Capri fica na Av. Paranavaí, 1733 - Pq. Ind. Bandeirantes. Maringá - PR
+- - Qual o endereço do buffet?
+  - O Buffet Ilha d'Capri fica na Av. Paranavaí, 1733 - Pq. Ind. Bandeirantes. Maringá - PR
+- - Qual o endereço do local?
+  - O Buffet Ilha d'Capri fica na Av. Paranavaí, 1733 - Pq. Ind. Bandeirantes. Maringá - PR
 - - Como confirmar minha presença?
   - Não se preocupe a Assessoria ira entrar em contato com você, mas você pode também enviar uma mensagem para o whatsapp da Assesoria
 - - Quero confirmar minha presença
@@ -118,6 +128,8 @@ conversations:
 - - Presente
   - Felizmente os noivos já tem toda a casa pronta, por esse motivo eles pedem que se possível você dê seu presente em dinheiro (pix ou loja de presentes)
 - - Como presentear?
+  - Felizmente os noivos já tem toda a casa pronta, por esse motivo eles pedem que se possível você dê seu presente em dinheiro (pix ou loja de presentes)
+- - Como presenteio?
   - Felizmente os noivos já tem toda a casa pronta, por esse motivo eles pedem que se possível você dê seu presente em dinheiro (pix ou loja de presentes)
 - - Como faço para presentear?
   - Felizmente os noivos já tem toda a casa pronta, por esse motivo eles pedem que se possível você dê seu presente em dinheiro (pix ou loja de presentes)
@@ -138,4 +150,6 @@ conversations:
 - - Quem são os noivos?
   - Os noivos são Marcos Lauder e Juliani, um casal lindo e feliz que quer compartilhar essa alegria com você.
 - - Padrinhos
+  - Serão 3 pares de padrinhos para cada noivo.
+- - Quem são os padrinhos?
   - Serão 3 pares de padrinhos para cada noivo.
