@@ -22,11 +22,14 @@ def home():
 @app.route("/get")
 def get_bot_response():
     userText = request.args.get('msg').upper()
-    tag = ""
-    if "QUANDO" in userText or "DIA" in userText or "HORA" in userText:
+    tag = "Geral"
+    if "BOM DIA" in userText or "BOA TARDE" in userText or "BOA NOITE" in userText or "OI" in userText or "OLÁ" in userText:
+        tag = "Cumprimentos"
+    if "QUANDO" in userText or ("DIA" in userText and "BOM DIA" not in userText) or "HORA" in userText:
         tag = "Quando"
     if "ONDE" in userText or "LOCAL" in userText or "CHEGAR" in userText or "CHEGO" in userText or "AONDE" in userText or "IR" in userText or "ENDEREÇO" in userText or "LOCALIZAÇÃO" in userText:
         tag = "Onde"
+    
     resposta = chatbot.get_response(
         userText,
         additional_response_selection_parameters={
