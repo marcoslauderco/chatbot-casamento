@@ -22,6 +22,7 @@ def home():
 @app.route("/get")
 def get_bot_response():
     userText = request.args.get('msg').upper()
+    userText = userText.replace("?", "")
 
     tag = "Geral"
     if "BOM DIA" in userText or "BOA TARDE" in userText or "BOA NOITE" in userText or "OI" in userText or "OLÁ" in userText:
@@ -49,7 +50,7 @@ def get_bot_response():
             'tags': [tag]
         }
     )
-    
+
     return str(camel_case(resposta))
 
 @app.route("/traine")
