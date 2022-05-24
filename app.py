@@ -2,7 +2,6 @@ from flask import Flask, render_template, request
 from chatterbot import ChatBot
 from chatterbot.trainers import ChatterBotCorpusTrainer
 from flask_cors import CORS
-from re import sub
 
 app = Flask(__name__)
 CORS(app)
@@ -13,7 +12,7 @@ chatbot = ChatBot("Amazing Bot",
     read_only=True)
 
 def camel_case(s):
-  s = sub(r"(_|-)+", " ", s).lower()
+  s = s.lower()
   return ''.join([s[0].upper(), s[1:]])
     
 @app.route("/")
