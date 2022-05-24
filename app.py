@@ -22,6 +22,7 @@ def home():
 @app.route("/get")
 def get_bot_response():
     userText = request.args.get('msg').upper()
+    
     tag = "Geral"
     if "BOM DIA" in userText or "BOA TARDE" in userText or "BOA NOITE" in userText or "OI" in userText or "OLÁ" in userText:
         tag = "Cumprimentos"
@@ -29,7 +30,19 @@ def get_bot_response():
         tag = "Quando"
     if "ONDE" in userText or "LOCAL" in userText or "CHEGAR" in userText or "CHEGO" in userText or "AONDE" in userText or "IR" in userText or "ENDEREÇO" in userText or "LOCALIZAÇÃO" in userText:
         tag = "Onde"
-    
+    if "ROUPA" in userText or "VESTIMENTA" in userText or "VESTIDO" in userText or "TERNO" in userText or "DRESS" in userText or "VESTIR" in userText:
+        tag = "Vestimenta"
+    if "PRESENÇA" in userText:
+        tag = "presenca"
+    if "PRESENTE" in userText or "PRESENTEAR" in userText or "PRESENTEIO" in userText:
+        tag = "presente"
+    if "NOIVO" in userText or "NOIVA" in userText or "CASAL" in userText or "PADRINHO" in userText or "MADRINHA" in userText:
+        tag = "noivos"
+    if "BEBIDA" in userText or "COMIDA" in userText or "FRIOS" in userText or "CARDAPIO" in userText or "DRINK" in userText or "COMER" in userText or "BEBER" in userText or "DOCE" in userText or "BOLO" in userText or "SOBREMESA" in userText or "DOCINHO" in userText:
+        tag = "comes"
+    if "MUSICA" in userText or "BANDA" in userText or "DJ" in userText or "DANÇA" in userText or "DIVERSÃO" in userText:
+        tag = "diversao"
+
     resposta = chatbot.get_response(
         userText,
         additional_response_selection_parameters={
@@ -48,6 +61,12 @@ def get_bot_traine():
     trainer.train("./corpus/greetings.yml")
     trainer.train("./corpus/quando.yml")
     trainer.train("./corpus/onde.yml")
+    trainer.train("./corpus/vestimenta.yml")
+    trainer.train("./corpus/presenca.yml")
+    trainer.train("./corpus/presente.yml")
+    trainer.train("./corpus/noivos.yml")
+    trainer.train("./corpus/comes.yml")
+    trainer.train("./corpus/diversao.yml")
     trainer.train("./corpus/casamento.yml")
     trainer.train("./corpus/compliment.yml")
     trainer.train("./corpus/conversations.yml")
