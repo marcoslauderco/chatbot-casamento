@@ -12,7 +12,7 @@ chatbot = ChatBot("Amazing Bot",
     read_only=True)
 
 def camel_case(s):
-  s = s.lower()
+  s = str(s).lower()
   return ''.join([s[0].upper(), s[1:]])
     
 @app.route("/")
