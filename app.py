@@ -39,7 +39,7 @@ def get_bot_response():
         tag = "presente"
     if "NOIVO" in userText or "NOIVA" in userText or "CASAL" in userText or "PADRINHO" in userText or "MADRINHA" in userText:
         tag = "noivos"
-    if "BEBIDA" in userText or "COMIDA" in userText or "FRIOS" in userText or "CARDAPIO" in userText or "DRINK" in userText or "COMER" in userText or "BEBER" in userText or "DOCE" in userText or "BOLO" in userText or "SOBREMESA" in userText or "DOCINHO" in userText:
+    if "BEBIDA" in userText or "COMIDA" in userText or "FRIOS" in userText or "CARDAPIO" in userText or "DRINK" in userText or "COMER" in userText or "BEBER" in userText or "DOCE" in userText or "BOLO" in userText or "SOBREMESA" in userText or "DOCINHO" in userText or "LANCHE" in userText or "JANTAR" in userText:
         tag = "comes"
     if "MUSICA" in userText or "BANDA" in userText or "DJ" in userText or "DANÇA" in userText or "DIVERSÃO" in userText:
         tag = "diversao"
