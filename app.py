@@ -13,6 +13,14 @@ chatbot = ChatBot("Amazing Bot",
 
 def camel_case(s):
   s = str(s).lower()
+  s = s.replace("lauder", "Lauder")
+  s = s.replace("july", "July")
+  s = s.replace("marcos", "Marcos")
+  s = s.replace("juliani", "Juliani")
+  s = s.replace("ilha d'capri", "Ilha d'Capri")
+  s = s.replace("[endereco]", "Av. Paranavaí, 1733 - Pq. Ind. Bandeirantes. Maringá - PR")
+  s = s.replace("[whatsapp]", "")
+  s = s.replace("[diaehora]", "17 de Setembro de 2022 às 19:00")
   return ''.join([s[0].upper(), s[1:]])
     
 @app.route("/")
