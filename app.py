@@ -36,21 +36,24 @@ def get_bot_response():
     if "BOM DIA" in userText or "BOA TARDE" in userText or "BOA NOITE" in userText or "OI" in userText or "OLÁ" in userText:
         tag = "Cumprimentos"
     if "QUANDO" in userText or ("DIA" in userText and "BOM DIA" not in userText) or "HORA" in userText:
-        tag = "Quando"
-    if "ONDE" in userText or "LOCAL" in userText or "CHEGAR" in userText or "CHEGO" in userText or "AONDE" in userText or "IR" in userText or "ENDEREÇO" in userText or "LOCALIZAÇÃO" in userText:
-        tag = "Onde"
+        return str(camel_case("DIA [diaehora]. POR FAVOR CHEGUE COM ANTECEDÊNCIA"))
+    if "ONDE" in userText or "LOCAL" in userText or "AONDE" in userText:
+        return str(camel_case("NO BUFFET ILHA D'CAPRI. A CERIMÔNIA E A FESTA SERÃO REALIZADAS NO MESMO LOCAL."))
+    if "CHEGAR" in userText or "CHEGO" in userText or "IR" in userText or "ENDEREÇO" in userText or "LOCALIZAÇÃO" in userText:
+        return str(camel_case("O BUFFET ILHA D'CAPRI FICA NA [endereco]"))
     if "ROUPA" in userText or "VESTIMENTA" in userText or "VESTIDO" in userText or "TERNO" in userText or "DRESS" in userText or "VESTIR" in userText:
-        tag = "Vestimenta"
+        return str(camel_case("VISTA O MESMO QUE QUALQUER OUTRO CASAMENTO, TENHO CERTEZA QUE VOCÊ VAI ESTAR SHOW."))
     if "PRESENÇA" in userText:
-        tag = "presenca"
+        return str(camel_case("NÃO SE PREOCUPE A ASSESSORIA IRA ENTRAR EM CONTATO COM VOCÊ, MAS VOCÊ PODE TAMBÉM ENVIAR UMA MENSAGEM PARA O WHATSAPP DA ASSESORIA [whatsapp]"))
     if "PRESENTE" in userText or "PRESENTEAR" in userText or "PRESENTEIO" in userText:
-        tag = "presente"
+        return str(camel_case("FELIZMENTE OS NOIVOS JÁ TEM TODA A CASA PRONTA, POR ESSE MOTIVO ELES PEDEM QUE SE POSSÍVEL VOCÊ DÊ SEU PRESENTE EM DINHEIRO (PIX OU LOJA DE PRESENTES)"))
     if "NOIVO" in userText or "NOIVA" in userText or "CASAL" in userText or "PADRINHO" in userText or "MADRINHA" in userText:
         tag = "noivos"
     if "BEBIDA" in userText or "COMIDA" in userText or "FRIOS" in userText or "CARDAPIO" in userText or "DRINK" in userText or "COMER" in userText or "BEBER" in userText or "DOCE" in userText or "BOLO" in userText or "SOBREMESA" in userText or "DOCINHO" in userText or "LANCHE" in userText or "JANTAR" in userText:
         tag = "comes"
     if "MUSICA" in userText or "BANDA" in userText or "DJ" in userText or "DANÇA" in userText or "DIVERSÃO" in userText:
-        tag = "diversao"
+        return str(camel_case("OS NOIVOS CONTRATARAM UM BANDA MANEIRA PARA ANIMAR A FESTA, EU JÁ ESTOU TREINANDO MEUS PASSOS DE DANÇA E VOCÊ?"))
+
 
     resposta = chatbot.get_response(
         userText,
