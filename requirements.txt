@@ -1,7 +1,7 @@
 PyYAML<4.0,>=3.12
 SQLAlchemy>=1.4.18
 Flask
-chatterbot==1.0.8
+chatterbot==1.0.4
 chatterbot-corpus
 pytz
 flask_cors
