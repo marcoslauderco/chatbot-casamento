@@ -1,0 +1,28 @@
+version: '3'
+services:
+    chatbot_casamento:
+        image: python:3.7.3
+        volumes:
+            - '.:/usr/src/app'
+        networks:
+            - proxy_net
+            - chatbot_net
+        working_dir: /usr/src/app
+        command: bash -c "pip install --no-cache-dir -r requirements.txt && python app.py"
+    db:
+      image: mysql
+      restart: always
+      environment:
+        MYSQL_USER: chatbotuser
+        MYSQL_PASSWORD: chatbotpss
+        MYSQL_DATABASE: chatbotdb
+        MYSQL_ROOT_PASSWORD: chatrootpss
+      networks:
+        - chatbot_net
+      ports:
+          - 3308:3306
+networks:
+    chatbot_net:
+      driver: bridge
+    proxy_net:
+      external: true

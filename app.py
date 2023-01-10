@@ -5,11 +5,8 @@ from flask_cors import CORS
 
 app = Flask(__name__)
 CORS(app)
-
-chatbot = ChatBot("Amazing Bot",
-    storage_adapter='chatterbot.storage.SQLStorageAdapter',
-    database_uri="postgres://cehwxqvmrxdguy:c23e4da69da5277379a2d705b0cf5018471c362d767ae90cffe73e0309f643f7@ec2-3-224-125-117.compute-1.amazonaws.com:5432/dbru51gsii5r3a",
-    read_only=True)
+def getDbUrl():
+    return "mysql://chatbotuser:chatbotpss@db:3306/chatbotdb"
 
 def camel_case(s):
   s = str(s).lower()
@@ -54,6 +51,10 @@ def get_bot_response():
     if "MUSICA" in userText or "BANDA" in userText or "DJ" in userText or "DANÇA" in userText or "DIVERSÃO" in userText:
         return str(camel_case("OS NOIVOS CONTRATARAM UM BANDA MANEIRA PARA ANIMAR A FESTA, EU JÁ ESTOU TREINANDO MEUS PASSOS DE DANÇA E VOCÊ?"))
 
+    chatbot = ChatBot("Amazing Bot",
+    storage_adapter='chatterbot.storage.SQLStorageAdapter',
+    database_uri=getDbUrl(),
+    read_only=True)
 
     resposta = chatbot.get_response(
         userText,
@@ -68,7 +69,7 @@ def get_bot_response():
 def get_bot_traine():
     chatbotTraine = ChatBot("Amazing Bot",
     storage_adapter='chatterbot.storage.SQLStorageAdapter',
-    database_uri="postgres://cehwxqvmrxdguy:c23e4da69da5277379a2d705b0cf5018471c362d767ae90cffe73e0309f643f7@ec2-3-224-125-117.compute-1.amazonaws.com:5432/dbru51gsii5r3a",
+    database_uri=getDbUrl(),
     read_only=False)
     trainer = ChatterBotCorpusTrainer(chatbotTraine)
     trainer.train("./corpus/greetings.yml")
@@ -83,6 +84,12 @@ def get_bot_traine():
     trainer.train("./corpus/casamento.yml")
     trainer.train("./corpus/compliment.yml")
     trainer.train("./corpus/conversations.yml")
+    trainer.train("./corpus/games.yml")
+    trainer.train("./corpus/linguistic_knowledge.yml")
+    trainer.train("./corpus/money.yml")
+    trainer.train("./corpus/proverbs.yml")
+    trainer.train("./corpus/suggestions.yml")
+    trainer.train("./corpus/trivia.yml")
     return str("Chatbot treinado")
 
 
