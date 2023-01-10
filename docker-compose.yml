@@ -19,8 +19,6 @@ services:
         MYSQL_ROOT_PASSWORD: chatrootpss
       networks:
         - chatbot_net
-      ports:
-          - 3308:3306
 networks:
     chatbot_net:
       driver: bridge
