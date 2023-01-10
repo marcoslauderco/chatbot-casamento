@@ -6,4 +6,3 @@ chatterbot-corpus
 pytz
 flask_cors
 flask_sqlalchemy
-spacy
