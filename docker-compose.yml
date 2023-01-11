@@ -10,13 +10,12 @@ services:
         working_dir: /usr/src/app
         command: bash -c "pip install --no-cache-dir -r requirements.txt && python app.py"
     db:
-      image: mysql
+      image: postgres:11
       restart: always
       environment:
-        MYSQL_USER: chatbotuser
-        MYSQL_PASSWORD: chatbotpss
-        MYSQL_DATABASE: chatbotdb
-        MYSQL_ROOT_PASSWORD: chatrootpss
+        POSTGRES_USER: chatbotuser
+        POSTGRES_PASSWORD: chatbotpss
+        POSTGRES_DB: chatbotdb
       networks:
         - chatbot_net
 networks:

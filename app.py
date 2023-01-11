@@ -6,7 +6,7 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 def getDbUrl():
-    return "mysql://chatbotuser:chatbotpss@db:3306/chatbotdb"
+    return "postgresql://chatbotuser:chatbotpss@db:5432/chatbotdb"
 
 def camel_case(s):
   s = str(s).lower()
@@ -85,7 +85,6 @@ def get_bot_traine():
     trainer.train("./corpus/compliment.yml")
     trainer.train("./corpus/conversations.yml")
     trainer.train("./corpus/games.yml")
-    trainer.train("./corpus/linguistic_knowledge.yml")
     trainer.train("./corpus/money.yml")
     trainer.train("./corpus/proverbs.yml")
     trainer.train("./corpus/suggestions.yml")
